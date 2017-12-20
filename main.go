@@ -62,4 +62,39 @@ func main() {
 
 // Check to see all tiles are placed in blank spots
 
-//
+type Word string
+
+type Board [][]string
+
+type Placement struct {
+	x int
+	y int
+}
+
+type Tile struct {
+	placed Placement
+	letter rune
+}
+
+type Hand []Tile
+
+type Board [][]Tile
+
+type Dictionary struct {
+	ScoreLookup map[rune]int
+	WordList    []string
+}
+
+func (Dictionary d) Score(word) (int, error) {
+	for _, check := range d.WordList {
+		if check == word {
+		}
+
+	}
+
+	score := 0
+	for _, ch := range string(word) {
+		score += d.ScoreLookup[ch]
+	}
+	return score, nil
+}
