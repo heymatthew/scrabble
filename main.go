@@ -61,5 +61,3 @@ func main() {
 // Given a set of words, tell me which ones are NOT in my dictionary
 
 // Check to see all tiles are placed in blank spots
-
-//
